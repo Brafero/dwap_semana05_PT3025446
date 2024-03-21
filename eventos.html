@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Eventos - IFSP - Pirituba</title>
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
 <form action="/submit-your-form" method="post">
     <div class="box">
         <label for="evento">Evento:</label>
-        <select name="evento" id="evento">
+        <select name="evento" id="evento" required>
             <option value="" disabled selected>-- Selecionar --</option>
             <option value="voeSemAsas">Voe sem asas</option>
             <option value="festaJunina">Festa Junina</option>
@@ -50,13 +50,11 @@
         <label for="celular">Celular:</label>
         <input type="tel" id="celular" name="celular" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" placeholder="(xx)xxxxx-xxxx" required>
 
-        <div>
-            <label>Sexo:</label>
-            <input type="radio" id="masculino" name="sexo" value="masculino">
-            <label for="masculino">Masculino</label>
-            <input type="radio" id="feminino" name="sexo" value="feminino">
-            <label for="feminino">Feminino</label>
-        </div>
+        <label for="sexo">Sexo:</label>
+        <input type="radio" id="masculino" name="sexo" value="masculino" required>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="sexo" value="feminino" required>
+        <label for="feminino">Feminino</label>
 
         <label for="dataNascimento">Data de Nascimento:</label>
         <input type="date" id="dataNascimento" name="dataNascimento" required>
@@ -65,4 +63,20 @@
         <input type="color" id="corFavorita" name="corFavorita" value="#000000" required>
 
         <label for="perfilGithub">Perfil no Github:</label>
-        <input type="url" id="perfilGithub" name="
+        <input type="url" id="perfilGithub" name="perfilGithub" placeholder="https://github.com/usuario" required>
+    </div>
+    
+    <input type="submit" value="Inscrever">
+    <button type="reset">Limpar</button>
+</form>
+<footer>
+        <br><br>
+        <div id="my_menu" align="left">
+            <a href="https://www.facebook.com/ifsppirituba"><img src="Imagens/facebook.png" width="41" height="43" title="IFSP Facebook" alt="IFSP Facebook"></a>
+        </div>
+        <p>
+            IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
+        </p>
+    </footer>
+</body>
+</html>
