@@ -13,7 +13,7 @@
     <img src="Imagens/Logo.jpg" alt="Logo IFSP Pirituba">
 </header>
 
-<h2 style="text-align: center;">Inscreva-se</h2>
+<h2 style="text-align: left;">Inscreva-se</h2>
 
 <form action="/submit-your-form" method="post">
     <div style="border: 1px solid black;">
@@ -24,13 +24,15 @@
             <option value="festivalTecnologia">Festival de Tecnologia</option>
         </select>
     </div>
+<br>
 
     <div style="border: 1px solid black;">
         Usuário: <input type="text" id="usuario" name="usuario" required><br>
         Senha: <input type="password" id="senha" name="senha" required><br>
         Confirmar Senha: <input type="password" id="confirmarSenha" name="confirmarSenha" required>
     </div>
-
+<br>
+    
     <div style="border: 1px solid black;">
         Nome Completo: <input type="text" id="nomeCompleto" name="nomeCompleto" required><br>
         Email: <input type="email" id="email" name="email" required><br>
@@ -43,7 +45,8 @@
         Cor Favorita: <input type="color" id="corFavorita" name="corFavorita" value="#000000" required><br>
         Perfil do Github: <input type="url" id="perfilGithub" name="perfilGithub" placeholder="https://github.com/usuario" required>
     </div>
-
+<br>
+    
     <button type="button" onclick="verificarFormulario()">Inscrever</button>
     <button type="reset">Limpar</button>
 </form>
