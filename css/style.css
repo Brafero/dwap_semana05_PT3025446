@@ -1,40 +1,123 @@
-/* estilos.css */
-.box {
-    border: 1px solid black;
-    margin: 10px 0;
-    padding: 10px;
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
-.box h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
+
+header#cabecalho, footer {
+  background-color: #3f3f3f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
-.box label {
-    display: block;
-    margin: 10px 0;
+
+header#cabecalho img, footer img {
+  display: block;
+  margin: 0 auto;
 }
-.box input[type="text"],
-.box input[type="password"],
-.box input[type="email"],
-.box input[type="tel"],
-.box input[type="date"],
-.box input[type="url"],
-.box select,
-.box input[type="color"] {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0 15px 0;
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
 }
-.box input[type="radio"] {
-    margin-right: 5px;
+
+nav a:hover {
+  color: red;
 }
-.box input[type="submit"],
-.box button {
-    padding: 10px 20px;
-    margin-right: 10px;
+
+.infos, .infos img, .infos iframe {
+  text-align: center;
+  margin: 20px 0;
 }
-.form-title {
-    font-weight: bold;
-    text-decoration: underline;
-    padding-bottom: 10px;
+
+.infos img, .infos iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="submit"], input[type="reset"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background-color: #45a049;
+}
+
+form input, form select, form textarea {
+  width: 95%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+fieldset {
+  margin: 20px;
+  border: none;
+}
+
+.caixa-cinza {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.rodapé a, .rodapé p {
+  color: white;
+  text-decoration: none;
+}
+
+.rodapé p {
+  margin: 10px 0;
+}
+
+/* Adaptação para dropdown menus e outros elementos, caso necessário */
+.dropdown-content a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content, .dropdown:hover .dropdown-content {
+  display: none; /* Esconda o dropdown por padrão e mostre apenas no hover com CSS específico */
+}
+
+/* Estilos para o menu dropdown */
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: red;
 }
