@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Entrar - IFSP - Pirituba</title>
-  <link href="imagens/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <title>Desenvolvimento web: Cliente Semana 6</title>
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 
-  <header id="cabecalho">
-    <nav>
-      <a href="index.html">HOME</a> |
-      <a href="eventos.html">EVENTOS</a> |
-      <a href="contato.html">CONTATO</a> |
-      <a href="ads.html">Análise e Desenvolvimeto de Sistemas</a> |
-      <a href="#">Engenharia de Produção</a> |
-      <a href="#">Gestão em Tecnologia da Informação</a> |
-      <a href="#">Letras</a> |
-      <a href="#">Gestão Pública</a> |
-      <a href="entrar.html">ENTRAR</a> |
-      <a href="sobre.html">SOBRE</a>
-    </nav>
-    <img src="imagens/Logo.jpg" alt="Logo IFSP" />
-  </header> 
+  <nav class="cabecalho">
+
+    <ul class="menu-l">
+      <li class="item"><a href="index.html" class="menu-btn">HOME</a></li>
+      <li class="item"><a href="eventos.html" class="menu-btn">EVENTOS</a></li>
+      <li class="item"><a href="contato.html" class="menu-btn">CONTATO</a></li>
+
+      <div class="dropdown">
+        <button class="dropbtn">CURSOS</button>
+        <div class="dropdown-content">
+          <a href="ads.html">Análise e Desenvolvimeto de Sistemas</a>
+          <a href="#">Engenharia de Produção</a>
+          <a href="#">Gestão em Tecnologia da Informação</a>
+          <a href="#">Letras</a>
+          <a href="#">Gestão Pública</a>
+        </div>
+      </div>
+
+      <li class="item"><a href="entrar.html" class="menu-btn">ENTRAR</a></li>
+    </ul>
+
+      <div class="menu-d">
+        <ul class="menu-l">
+      <li class="item"><a href="sobre.html" class="menu-btn">SOBRE</a></li>
+      </ul>
+
+    </div> 
+
+  </nav>
+
+  <figure class="logo">
+    <img src="Logo.jpg" alt="Logo IFSP"/>
+  </figure> 
 
   <h1>Entrar</h1>
 
   <form>
-    Usuário: <input name="usuario" required><br>
-    Senha: <input name="senha" type="password" required><br>
-    <input type="submit" value="Enviar"/>
-    <a href="#">Esqueci a senha</a>
+    <div class="caixa-cinza">
+      <a>Usuário <input name="usuario" class="user" required></a>
+    </div> 
+
+    <div class="caixa-cinza">
+      <a>Senha <input name="senha1" type="password" class="senha" required></a>
+    </div> 
+
+    <div class="caixa-cinza">
+      <input type="submit" value="Enviar"/>
+        <a href="#">Esqueci a senha</a>
+    </div>
+    
   </form>
 
-  <footer>
-    <a href="#cabecalho"><img src="imagens/facebook.png" alt="Ícone Facebook" width="40"/></a>
+  <div class="rodapé">
+    <br>
+    <a href="https://www.facebook.com/ifsppirituba">
+      <img src="facebook.png" alt="Ícone Facebook" width="40"/>
+    </a>
+
     <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100</p>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
