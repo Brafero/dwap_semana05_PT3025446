@@ -16,40 +16,46 @@
 <h2 style="text-align: left;">Inscreva-se</h2>
 
 <form action="/submit-your-form" method="post">
-    <div style="border: 1px solid black;">
-        Escolha um evento:
+    <div style="border: 1px solid black; padding: 10px;">
+        <strong>Escolha um evento:</strong><br><br>
         <select name="evento" id="evento">
+            <option value="">--Selecionar--</option>
             <option value="voeSemAsas">Voe sem asas</option>
             <option value="festaJunina">Festa Junina</option>
             <option value="festivalTecnologia">Festival de Tecnologia</option>
         </select>
-        <br>
+        <br><br>
     </div>
 <br>
 
-    <div style="border: 1px solid black;">
+    <div style="border: 1px solid black; padding: 10px;">
+        <strong>Informações de Acesso</strong><br><br>
         Usuário: <input type="text" id="usuario" name="usuario" required><br><br>
         Senha: <input type="password" id="senha" name="senha" required><br><br>
-        Confirmar Senha: <input type="password" id="confirmarSenha" name="confirmarSenha" required><br>
+        Confirmar Senha: <input type="password" id="confirmarSenha" name="confirmarSenha" required><br><br>
     </div>
 <br>
     
-    <div style="border: 1px solid black;">
+    <div style="border: 1px solid black; padding: 10px;">
+        <strong>Informações Pessoais</strong><br><br>
         Nome Completo: <input type="text" id="nomeCompleto" name="nomeCompleto" required><br><br>
         Email: <input type="email" id="email" name="email" required><br><br>
         Celular: <input type="tel" id="celular" name="celular" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" placeholder="(xx)xxxxx-xxxx" required><br><br>
-        Sexo: <input type="radio" id="masculino" name="sexo" value="masculino">
-        <label for="masculino">Masculino</label>
-        <input type="radio" id="feminino" name="sexo" value="feminino"><br>
-        <label for="feminino">Feminino</label><br>
+        <div>
+            <strong>Sexo</strong><br><br>
+            <input type="radio" id="masculino" name="sexo" value="masculino">
+            <label for="masculino">Masculino</label><br><br>
+            <input type="radio" id="feminino" name="sexo" value="feminino">
+            <label for="feminino">Feminino</label><br><br>
+        </div>
         Data de Nascimento: <input type="date" id="dataNascimento" name="dataNascimento" required><br><br>
         Cor Favorita: <input type="color" id="corFavorita" name="corFavorita" value="#000000" required><br><br>
-        Perfil do Github: <input type="url" id="perfilGithub" name="perfilGithub" placeholder="https://github.com/usuario" required><br>
+        Perfil do Github: <input type="url" id="perfilGithub" name="perfilGithub" placeholder="https://github.com/usuario" required><br><br>
     </div>
 <br>
     
     <button type="button" onclick="verificarFormulario()">Inscrever</button>
-    <button type="reset">Limpar</button>
+    <button type="reset" onclick="resetarEvento()">Limpar</button>
 </form>
 
 <script>
@@ -58,12 +64,3 @@ function verificarFormulario() {
     var campoVazio = Array.from(campos).some(campo => !campo.value);
     if (campoVazio) {
         alert('Por favor, preencha todos os campos obrigatórios.');
-    } else {
-        // Aqui você pode inserir a lógica de envio do formulário ou outra ação desejada
-        alert('Formulário preenchido corretamente!');
-    }
-}
-</script>
-
-</body>
-</html>
