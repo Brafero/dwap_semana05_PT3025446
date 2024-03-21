@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Eventos</title>
+</head>
+<body>
+
+<form id="formEventos">
+    <fieldset style="border: 1px solid black;">
+        <legend>Eventos</legend>
+        <select name="evento" id="evento">
+            <option value="">Selecione um Evento</option>
+            <option value="voeSemAsas">Voe sem asas</option>
+            <option value="festaJunina">Festa Junina</option>
+            <option value="festivalTecnologia">Festival de Tecnologia</option>
+        </select>
+    </fieldset>
+
+    <fieldset style="border: 1px solid black;">
+        <legend>Informações de Acesso</legend>
+        Usuário:<br>
+        <input type="text" id="usuario" name="usuario"><br>
+        Senha:<br>
+        <input type="password" id="senha" name="senha"><br>
+        Confirmar Senha:<br>
+        <input type="password" id="confirmarSenha" name="confirmarSenha">
+    </fieldset>
+
+    <fieldset style="border: 1px solid black;">
+        <legend>Informações Pessoais</legend>
+        Nome Completo:<br>
+        <input type="text" id="nomeCompleto" name="nomeCompleto"><br>
+        Email:<br>
+        <input type="email" id="email" name="email"><br>
+        Celular:<br>
+        <input type="tel" id="celular" name="celular" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" placeholder="(xx)xxxxx-xxxx"><br>
+        Sexo:<br>
+        <input type="radio" id="masculino" name="sexo" value="masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="feminino" name="sexo" value="feminino">
+        <label for="feminino">Feminino</label><br>
+        Data de Nascimento:<br>
+        <input type="date" id="dataNascimento" name="dataNascimento"><br>
+        Cor Favorita:<br>
+        <input type="color" id="corFavorita" name="corFavorita" value="#000000"><br>
+        Perfil do Github:<br>
+        <input type="url" id="perfilGithub" name="perfilGithub" placeholder="https://github.com/usuario">
+    </fieldset>
+
+    <button type="button" onclick="verificarCampos()">Inscrever</button>
+    <button type="button" onclick="limparFormulario()">Limpar</button>
+</form>
+
+<script>
+    function verificarCampos() {
+        let campos = document.querySelectorAll('#formEventos input, #formEventos select');
+        let campoVazio = Array.from(campos).some(campo => {
+            if (campo.type === 'radio') {
+                let nome = campo.name;
+                return !document.querySelector(`input[name="${nome}"]:checked`);
+            }
+            return !campo.value;
+        });
+        
+        if (campoVazio) {
+            alert('Por favor, preencha todos os campos.');
+            return false;
+        } else {
+            // Aqui você pode adicionar o que acontece quando todos os campos estão preenchidos
+            alert('Formulário preenchido com sucesso.');
+        }
+    }
+
+    function limparFormulario() {
+        document.getElementById('formEventos').reset();
+        // Define a cor favorita de volta para preto após o reset
+        document.getElementById('corFavorita').value = "#000000";
+    }
+</script>
+
+</body>
+</html>
