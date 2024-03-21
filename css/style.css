@@ -1,0 +1,40 @@
+/* estilos.css */
+.box {
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+}
+.box h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+.box label {
+    display: block;
+    margin: 10px 0;
+}
+.box input[type="text"],
+.box input[type="password"],
+.box input[type="email"],
+.box input[type="tel"],
+.box input[type="date"],
+.box input[type="url"],
+.box select,
+.box input[type="color"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+}
+.box input[type="radio"] {
+    margin-right: 5px;
+}
+.box input[type="submit"],
+.box button {
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+.form-title {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
